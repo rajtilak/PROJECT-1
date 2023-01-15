@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Dream Tour</title>
+    <link rel="icon" href="image/logo.png">
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+      <div class="signup">
+        <form>
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="text" placeholder="user name" required="">
+          <input type="email" name="email" placeholder="email" required="">
+          <input type="password" name="password" placeholder="password" required="">
+          <button ondblclick="auth()">Sign up</button>
+        </form>
+      </div>
+        
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="email" required="">
+          <input type="password" name="password" placeholder="password" required=""> 
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+        function auth(){
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if(username=="travel" && email=="admin123@gmail.com" && password=="travel123"){
+                window.location.assign("index.html");
+                alert("Login successfully");
+            }
+            else{
+                alert("Invalid Information");
+                return;
+            }
+
+        }
+    </script>
+    
+  </body>
+</html>
